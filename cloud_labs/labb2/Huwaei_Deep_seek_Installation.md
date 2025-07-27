@@ -2,11 +2,11 @@ Use the exercise account to access Lab Desktop.
 
 # What is Lab Desktop?
 Click the refresh button of the browser to refresh the exercise page.
-![Huawei_login_Screen_Shot]()
+
 On the exercise operation interface, open the browser, and go to the Huawei Cloud login page. Click IAM User. 
 Then, use the account assigned to you to log in to Huawei Cloud.
+![Huawei_login_Screen_Shot](images/logn_sandboxuser.png)
 
-*Note: Use the account provided by the exercise tutorial.1. Preparing the Lab Environment*
 
 # 1.1 Creating an ECS
 
