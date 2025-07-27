@@ -176,5 +176,107 @@ ts for the rest of the parameters.)Region: AP-Singapore
 1. Type: System disk image
 2. Source: Select a Windows ECS, for example, ecs-windows.
 3. Name: Enter a name, for example, image-windows2012
+   
+Step 4 Confirm the settings. Then, select I have read and agree to the Image Disclaimer and click Submit
+
+Step 5 Switch back to the Private Images tab page to view the image status.
+
+The time required for creating an image depends on the image size. Generally, it takes about 
+10 to 20 minutes. When the image creation completes, its status changes to Normal. 
+
+# 2.3 Modifying Image Information
+
+Step 1.  Locate the row that contains the image to be modified and click Modify in the Operation column
+Step 2.  You can modify the image name, memory, and other details
+
+# 2.4 Replicating an Image Within a Region
+
+Step 1 On the Image Management Service page, click Private Image to display the image list.
+
+Step 2 Locate the row that contains the image to be replicated and in the Operation column choose More > Replicate.
+
+Step 3 In the displayed Replicate Image dialog box, enter a new name for the image and click O
+K. (Do not select KMS encryption.)
+
+
+# 2.5 Applying for an ECS Using a Private Image
+
+Step 1 On the Private Images tab page, locate the image and click Apply for Server in the Oper
+ation column.
+
+Step 2 On the ECS purchase page, ensure that the private image is selected.
+Step 3 Go back to the ECS list to view the ECS created using the private image.
+
+# 3.1 Configuring a Linux ECS
+Take the ecs-linux ECS you created as an example.
+Step 1 Remotely log in to the ECS.
+Step 2 Check whether DHCP is configured for the ECS NICs. If it is not, configure it.
+*For CentOS, you can configure DHCP by adding PERSISTENT_DHCLIENT="y" to the /etc/sysc
+onfig/network-scripts/ifcfg-ethX configuration file using the vi editor.
+ vi /etc/sysconfig/network-scripts/ifcfgeth0*
+
+ Step 3 Check whether the one-click password reset plug-in has been installed on the ECS. If it is n
+ot, install it.
+
+Step 4 Check whether Cloud-Init is installed. If it is not, install it.
+
+Step 5 Delete files from the network rule directory.
+Note: To prevent NIC name drift on the new ECSs created from a private image, you need to 
+delete network rule files of the ECS used to create the image.
+Run the following command to check if there is a network rule file on the ESC:
+ *ls -l /etc/udev/rules.d*
+
+ # 3.2 Creating a Linux Private Image
+Step 1 Go back to the management console and in Service List choose Compute > Image Mana
+gement Service.
+
+Step 2 On the Image Management Service page, click Create Image.
+Step 3 Set the following parameters on the Create Image page and click Next.
+
+1.Type: System disk image
+2.Source: Select a Linux ECS, for example, ecs-linux.
+3.Name: Enter a name, for example, image-centos7.
+
+Step 4 Confirm the settings. Then, select I have read and agree to the Image Disclaimer and clic
+k Submit.
+
+Step 5 Switch back to the Private Images tab page to view the image status.
+
+The time required for creating an image depends on the image size. Generally, it takes about 
+10 to 20 minutes. When the image creation completes, its status changes to Normal.
+
+# 3.3 Sharing an Image
+You can share your images with other users. Before sharing images with a user, you need to 
+obtain their Project ID. You can share a single image or multiple images as needed.
+This document uses Windows ECS as an example. You need to use Linux ECS when performi
+ng operations.
+
+Step 1 Before sharing image with yourself, you need to find your Huawei Cloud account project I
+D. Log in to the management console using your Huawei Cloud account (not SandBox user).
+
+Step 2 Click the username in the upper right corner and select My Credentials from the drop-dow
+n list.
+
+Step 3 On the My Credentials page, view the project ID in the project list. You should use Project I
+D of region “ AP-Singapore”.
+
+Step 4 Return to the SandBox console.Using SandBox account, on the Private Images tab page, s
+elect the private image to be shared and in the Operation column choose More > Share
+
+Step 5 In the Share Image dialog box, enter your Project ID and click Add. Click OK.
+
+Step 6 Log in to the management console using your Huawei Cloud account(not SandBox User),
+
+# 3.4 Adding Tenants Who Can Use Shared Images
+
+Step 1 Return to the SandBox console.On the Image Management Service page, click Private Im
+age to display the image list.
+
+Step 2 Click the name of the image to be shared. On the Shared with Tenants tab page, click Add Tenant.
+go to the IMS console of “ AP-Singapore”, click the Shared Images tab, and click Accept.
+
+Step 3 In the Add Tenant dialog box, you can enter the Project ID and click Add. (If you want to s
+hare with yourself again, delete your account from list fisrt and then click Add
+
 
 
