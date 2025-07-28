@@ -35,6 +35,8 @@ Go to the [Lab Desktop] and open the browser to access the HUAWEI CLOUD login pa
 AM User Login. In the login dialog box, enter the assigned HUAWEI CLOUD lab account and pass
 word to log in to HUAWEI CLOUD, as shown in the HUAWEI CLOUD Lab Account.
 
+Step 1 Log in to the HUAWEI CLOUD console, and choose the AP-Singapore region .
+![AP_Singapore]()
 Step 2 In Service List on the left, choose Virtual Private Cloud.
 
 Step 3 Click Create VPC
