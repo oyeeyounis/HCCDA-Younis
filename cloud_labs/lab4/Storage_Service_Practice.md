@@ -444,8 +444,9 @@ Step 6. A message is displayed indicating that the request has been submitted.
 Step 7 Go back to the SFS console and view the result. 
 # 1.3.3.2 Mounting an SFS File System to a Linux ECS 
 # 1.3.3.2.1 Procedure 
-Step 1 Go to the ECS console. Locate the row that contains the purchased ECS and click Remote L
- ogin. 
+
+Step 1 Go to the ECS console. Locate the row that contains the purchased ECS and click Remote Login. 
+
 Step 2 Log in the ECS as user root. 
 
 Step 3 Run the following command to check whether the NFS software package has been installe
@@ -517,20 +518,27 @@ Step 1 Log in to the ECS console. Locate the row that contains the purchased Win
 # 1.3.3.3.2 Installing the NFS Client 
 
 Step 1 Open Server Manager by clicking the icon in the lower left corner. 
+
 Step 2 Click Add Roles and Features and click Next for three consecutive times to go to the Serve
  r Roles page. 
+ 
 Step 3 Under File and Storage Services, click Server for NFS. In the displayed window, click Add Fe
  atures. 
 Step 4 Click Next. On the Features page, click Client for NFS. 
+
 Step 5 Click Next to go to the Confirmation page. 
+
 Step 6 Click Install. 
+
 Step 7 After the installation is complete, restart the client and log to the ECS again as prompted. 
 
 # 1.3.3.3.3 Mounting the File System
 
 Step 1 Open Control Panel and choose to view by category. 
+
 Step 2 On the Control Panel, choose System and Security > Administrative Tools > Services for N
  etwork File System (NFS). 
+ 
 Step 3 Right-click Client for NFS and choose Properties. In the displayed dialog box, change the tr
  ansport protocol to TCP and select Use hard mounts as the default mount type. 
 
