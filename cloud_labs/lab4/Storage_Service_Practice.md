@@ -537,8 +537,10 @@ Step 3 Right-click Client for NFS and choose Properties. In the displayed dialog
 
 Step 4 Run the following command in the Command Prompt of the Windows Server 2012 (X is th
  e drive letter of the free disk): 
+ 
 For the SFS Turbo file system, run the following command: 
 mount -o nolock -o casesensitive=yes IP:/! X: 
+
 You can get the IP address from the SFS Turbo 
 (The mount address varies with the file system. Replace this mount address with your file system'
  s mount address. Do not copy the address in this example.) 
@@ -546,6 +548,8 @@ You can get the IP address from the SFS Turbo
 # 1.3.3.3.4 Verification 
 
 Step 1 On the Windows ECS, open This PC to check that the mounted file system is available. 
+
+
 Step 2 Access !(\\192.168.0.226)(X:) and check that file new exists. This file is created in the file sys
  tem from ECS ecs-linux, indicating that the SFS Turbo file system can be shared among servers. 
 Contents
